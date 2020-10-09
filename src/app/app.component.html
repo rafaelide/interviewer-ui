@@ -1,1 +1,23 @@
+<mat-toolbar color="primary">
+  <button
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Interviewer</span>
+</mat-toolbar>
+
+<mat-sidenav-container class="menu-container">
+  <mat-sidenav mode="side" opened>
+    <mat-nav-list>
+      <a mat-list-item [title]="'Home'" routerLink=""> Home </a>
+      <a mat-list-item [title]="'Questions'" routerLink="questions"> Questions </a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
 
